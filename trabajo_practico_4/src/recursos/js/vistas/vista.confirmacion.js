@@ -3,6 +3,7 @@ import '../modulos/comun.js';
 import { obtenerPedido } from '../modulos/almacen.js';
 import { pintarProductosResumen, pintarTotales } from '../modulos/render.js';
 import { escaparHTML } from '../modulos/util.js';
+import { crearEnlaceWhatsApp, mensajePedido } from '../modulos/whatsapp.js';
 
 const pedido = obtenerPedido();
 
@@ -15,4 +16,9 @@ if (!pedido) {
         `Vas a recibir tu pedido en ${escaparHTML(pedido.cliente.direccion)}, ${escaparHTML(pedido.cliente.ciudad)}, en los próximos días hábiles.`;
     pintarProductosResumen(document.querySelector('#resumen-productos'), pedido.items);
     pintarTotales(document.querySelector('#resumen-totales'), pedido);
+
+    // Envío real del pedido por WhatsApp: el mensaje ya viene armado.
+    const botonWhatsApp = document.querySelector('#enviar-whatsapp');
+    botonWhatsApp.href = crearEnlaceWhatsApp(mensajePedido(pedido));
+    botonWhatsApp.hidden = false;
 }

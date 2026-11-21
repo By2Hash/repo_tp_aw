@@ -1,6 +1,7 @@
 // Funciones auxiliares compartidas por todas las páginas.
 
 export const RUTA_IMAGENES = './recursos/imagenes/productos/';
+export const RUTA_ICONOS = './recursos/imagenes/iconos/';
 
 export function formatearPrecio(numero) {
     return '$' + Number(numero).toFixed(2);

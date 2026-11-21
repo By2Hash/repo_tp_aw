@@ -1,10 +1,12 @@
 // Vista de producto individual: toma el id de la URL (producto.html?id=...) y lo busca en el JSON.
-import '../modulos/comun.js';
+import { agregarBotonWhatsApp } from '../modulos/comun.js';
 import { cargarTienda } from '../modulos/datos.js';
 import { crearTarjetaRecomendada } from '../modulos/componentes.js';
 import { agregarAlCarrito } from '../modulos/almacen.js';
 import { leerCantidad, cantidadSegunAccion, CANTIDAD_MINIMA, CANTIDAD_MAXIMA } from '../modulos/cantidad.js';
 import { escaparHTML, formatearPrecio, mostrarEstado, RUTA_IMAGENES, MENSAJE_ERROR_CARGA } from '../modulos/util.js';
+
+agregarBotonWhatsApp();
 
 const contenedor = document.querySelector('#producto');
 const migas = document.querySelector('#migas');

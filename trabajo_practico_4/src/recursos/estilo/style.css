@@ -266,6 +266,59 @@ fieldset {
     border-color: #2e5d34;
 }
 
+.boton--whatsapp {
+    color: white;
+    background: #25d366;
+    border-color: #25d366;
+}
+
+.boton--whatsapp:hover {
+    color: white;
+    background: #1da851;
+    border-color: #1da851;
+}
+
+/* --- botón flotante de WhatsApp (fijo en la esquina inferior derecha) --- */
+.boton-flotante {
+    position: fixed;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.25);
+    transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.boton-flotante--whatsapp {
+    background: #25d366;
+}
+
+.boton-flotante--whatsapp:hover {
+    background: #1da851;
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgb(0 0 0 / 0.3);
+}
+
+.boton-flotante__icono {
+    width: 62%;
+    height: 62%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .boton-flotante {
+        transition: none;
+    }
+
+    .boton-flotante--whatsapp:hover {
+        transform: none;
+    }
+}
+
 /* --- grilla de productos (index, catálogos y recomendados) --- */
 /* Grilla: todas las columnas miden lo mismo, así las tarjetas no cambian de
    tamaño según cuántos productos tenga la última fila. */

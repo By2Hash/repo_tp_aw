@@ -1,9 +1,11 @@
 // Vista de catálogo (hombre / mujer): renderiza desde el JSON y aplica búsqueda, filtros y orden con eventos.
-import '../modulos/comun.js';
+import { agregarBotonWhatsApp } from '../modulos/comun.js';
 import { cargarTienda } from '../modulos/datos.js';
 import { crearTarjetaProducto } from '../modulos/componentes.js';
 import { agregarAlCarrito } from '../modulos/almacen.js';
 import { escaparHTML, normalizarTexto, mostrarEstado, MENSAJE_ERROR_CARGA } from '../modulos/util.js';
+
+agregarBotonWhatsApp();
 
 const grilla = document.querySelector('#grilla-productos');
 const formulario = document.querySelector('#filtros-catalogo');

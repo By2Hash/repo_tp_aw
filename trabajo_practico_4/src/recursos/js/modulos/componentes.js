@@ -1,6 +1,6 @@
 // Funciones que CONSTRUYEN HTML (devuelven texto) con los nombres de clase BEM del CSS.
 // No tocan el DOM: eso lo hace render.js.
-import { escaparHTML, formatearPrecio, RUTA_IMAGENES } from './util.js';
+import { escaparHTML, formatearPrecio, RUTA_IMAGENES, RUTA_ICONOS } from './util.js';
 import { CANTIDAD_MINIMA, CANTIDAD_MAXIMA } from './cantidad.js';
 
 export function crearTarjetaProducto(producto, { accion = 'agregar', compacta = false } = {}) {
@@ -59,4 +59,12 @@ export function crearItemCarrito(linea) {
             <p class="carrito-item__subtotal">${formatearPrecio(subtotal)}</p>
             <button class="carrito-item__quitar" type="button" data-accion="quitar">Quitar del carrito</button>
         </li>`;
+}
+
+// Botón flotante de WhatsApp: aparece en todas las páginas (lo inserta comun.js).
+export function crearBotonWhatsApp(enlace) {
+    return `
+        <a class="boton-flotante boton-flotante--whatsapp" href="${escaparHTML(enlace)}" target="_blank" rel="noopener noreferrer" aria-label="Escribinos por WhatsApp">
+            <img class="boton-flotante__icono" src="${RUTA_ICONOS}whatsapp.png" alt="">
+        </a>`;
 }

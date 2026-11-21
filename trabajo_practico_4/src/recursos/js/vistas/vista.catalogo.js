@@ -1,4 +1,4 @@
-// Catálogos (hombre / mujer): renderiza desde el JSON y aplica búsqueda, filtros y orden con eventos.
+// Vista de catálogo (hombre / mujer): renderiza desde el JSON y aplica búsqueda, filtros y orden con eventos.
 import '../modulos/comun.js';
 import { cargarTienda } from '../modulos/datos.js';
 import { crearTarjetaProducto } from '../modulos/componentes.js';

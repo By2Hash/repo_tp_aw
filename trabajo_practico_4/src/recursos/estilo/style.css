@@ -278,9 +278,16 @@ fieldset {
     list-style: none;
 }
 
+/* Cada producto es un <article> dentro de su <li>: el <li> es la celda de la
+   grilla y el <article> ocupa todo su alto. */
+.grilla-productos__item {
+    display: flex;
+}
+
 /* --- tarjeta de producto --- */
 .tarjeta-producto {
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 0.25rem;
 }

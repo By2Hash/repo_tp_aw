@@ -12,21 +12,25 @@ export function crearTarjetaProducto(producto, { accion = 'agregar', compacta = 
     const descripcion =
         accion === 'ver' ? '' : `<p class="tarjeta-producto__descripcion">${escaparHTML(producto.descripcion)}</p>`;
     return `
-        <li class="tarjeta-producto${compacta ? ' tarjeta-producto--compacta' : ''}">
-            <a class="tarjeta-producto__enlace-imagen" href="${enlaceProducto}" tabindex="-1" aria-hidden="true">
-                <img class="tarjeta-producto__imagen" src="${RUTA_IMAGENES}${producto.imagen}" alt="${escaparHTML(producto.nombre)}">
-            </a>
-            <h2 class="tarjeta-producto__titulo"><a class="tarjeta-producto__enlace" href="${enlaceProducto}">${escaparHTML(producto.nombre)}</a></h2>
-            ${descripcion}
-            <p class="tarjeta-producto__precio">${formatearPrecio(producto.precio)}</p>
-            ${boton}
+        <li class="grilla-productos__item">
+            <article class="tarjeta-producto${compacta ? ' tarjeta-producto--compacta' : ''}">
+                <a class="tarjeta-producto__enlace-imagen" href="${enlaceProducto}" tabindex="-1" aria-hidden="true">
+                    <img class="tarjeta-producto__imagen" src="${RUTA_IMAGENES}${producto.imagen}" alt="${escaparHTML(producto.nombre)}">
+                </a>
+                <h2 class="tarjeta-producto__titulo"><a class="tarjeta-producto__enlace" href="${enlaceProducto}">${escaparHTML(producto.nombre)}</a></h2>
+                ${descripcion}
+                <p class="tarjeta-producto__precio">${formatearPrecio(producto.precio)}</p>
+                ${boton}
+            </article>
         </li>`;
 }
 
 export function crearTarjetaRecomendada(recomendado) {
     return `
-        <li class="tarjeta-producto tarjeta-producto--compacta">
-            <img class="tarjeta-producto__imagen" src="${RUTA_IMAGENES}${recomendado.imagen}" alt="${escaparHTML(recomendado.nombre)}">
+        <li class="grilla-productos__item">
+            <article class="tarjeta-producto tarjeta-producto--compacta">
+                <img class="tarjeta-producto__imagen" src="${RUTA_IMAGENES}${recomendado.imagen}" alt="${escaparHTML(recomendado.nombre)}">
+            </article>
         </li>`;
 }
 

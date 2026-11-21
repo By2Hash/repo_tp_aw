@@ -6,7 +6,7 @@
     <title>Élite - Catálogo Hombre</title>
     <link rel="stylesheet" href="./recursos/estilo/style.css">
     <link rel="icon" href="./recursos/imagenes/logo/elite_icono.png">
-    <script type="module" src="./recursos/js/paginas/catalogo.js"></script>
+    <script type="module" src="./recursos/js/vistas/vista.catalogo.js"></script>
 </head>
 <body>
     <header class="encabezado-principal">
@@ -27,7 +27,7 @@
         <h1 class="titulo-pagina">COLECCIÓN HOMBRE</h1>
 
         <section class="filtros-catalogo" aria-label="Filtros y ordenamiento">
-            <form class="filtros-catalogo__form" id="filtros-catalogo" role="search">
+            <form class="filtros-catalogo__form" id="filtros-catalogo" role="search" action="catalogo_hombre.html" method="get">
                 <label class="filtros-catalogo__etiqueta" for="buscar">Buscar:
                     <input class="filtros-catalogo__select" type="search" name="buscar" id="buscar" placeholder="Nombre, color..." autocomplete="off">
                 </label>

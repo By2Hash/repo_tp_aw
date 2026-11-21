@@ -1,4 +1,4 @@
-// Paso 1 del checkout: datos de envío.
+// Vista del paso 1 del checkout: datos de envío.
 import '../modulos/comun.js';
 import { cargarTienda, cargarProvincias } from '../modulos/datos.js';
 import { obtenerCarrito, obtenerEnvio, guardarEnvio } from '../modulos/almacen.js';

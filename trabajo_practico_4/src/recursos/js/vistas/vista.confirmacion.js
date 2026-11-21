@@ -1,8 +1,8 @@
-// Paso 3: muestra el pedido guardado (JSON) en pantalla.
-import './comun.js';
-import { obtenerPedido } from './almacen.js';
-import { pintarProductosResumen, pintarTotales } from './componentes.js';
-import { escaparHTML } from './util.js';
+// Vista del paso 3: muestra el pedido guardado (JSON) en pantalla.
+import '../modulos/comun.js';
+import { obtenerPedido } from '../modulos/almacen.js';
+import { pintarProductosResumen, pintarTotales } from '../modulos/render.js';
+import { escaparHTML } from '../modulos/util.js';
 
 const pedido = obtenerPedido();
 

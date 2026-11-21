@@ -1,4 +1,4 @@
-// Carrito: cruza lo guardado en localStorage con el JSON de productos y lo renderiza.
+// Vista del carrito: cruza lo guardado en localStorage con el JSON de productos y lo renderiza.
 import '../modulos/comun.js';
 import { cargarTienda } from '../modulos/datos.js';
 import { obtenerCarrito, cambiarCantidad, quitarDelCarrito } from '../modulos/almacen.js';

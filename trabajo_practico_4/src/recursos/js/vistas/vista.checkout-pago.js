@@ -1,4 +1,4 @@
-// Paso 2 del checkout: método de pago y armado del pedido (JSON).
+// Vista del paso 2 del checkout: método de pago y armado del pedido (JSON).
 import '../modulos/comun.js';
 import { cargarTienda } from '../modulos/datos.js';
 import { obtenerCarrito, obtenerEnvio, guardarPedido, vaciarCarrito } from '../modulos/almacen.js';

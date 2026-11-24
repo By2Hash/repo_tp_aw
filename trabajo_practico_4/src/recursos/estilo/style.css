@@ -928,7 +928,62 @@ fieldset {
     margin-top: 2rem;
 }
 
+/* --- notificaciones en pantalla (toasts) --- */
+.notificaciones {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: min(380px, calc(100% - 2rem));
+}
 
+.notificacion {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    color: #18221b;
+    background: white;
+    border: 1px solid #d6ddd7;
+    border-left-width: 6px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.notificacion--exito {
+    border-left-color: #2e5d34;
+}
+
+.notificacion--error {
+    border-left-color: #b3261e;
+}
+
+.notificacion--aviso {
+    border-left-color: #c68a00;
+}
+
+.notificacion__texto {
+    flex: 1;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.notificacion__cerrar {
+    padding: 0 0.25rem;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #5f6b63;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.notificacion__cerrar:hover {
+    color: #18221b;
+}
 /* ==========================================================================
    5. RESPONSIVE
    ========================================================================== */
